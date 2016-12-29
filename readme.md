@@ -35,6 +35,6 @@ TODO: Write credits
 
 ## License
 
-This project is distributed under a [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.txt). See the [GNU GPL Site](https://www.gnu.org/licenses/gpl-3.0.en.html) for further info.
-
 ![GNU General Public License Version 3 Logo](http://i.imgur.com/E9bcWGA.png "GNU General Public License Version 3 Logo")
+
+This project is distributed under a [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.txt). See the [GNU GPL Site](https://www.gnu.org/licenses/gpl-3.0.en.html) for further info.
