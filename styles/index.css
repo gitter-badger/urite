@@ -1,0 +1,135 @@
+/*
+ * This file is part of urite.
+ *
+ * urite is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * urite is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with urite.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * This CSS file defines style definitions for the Main screen.
+ * Styles globally appliable to the project must be input on the main CSS file.
+ */
+
+html { overflow: hidden; }
+:not(html) {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+header {
+  top: 0;
+  width: 20%;
+  left: -20%;
+  text-align: center;
+  background: #9e9e9e;
+  transition: left 0.5s;
+}
+div#logo {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+img#app-icon {
+  width: 128px;
+}
+
+nav {
+  width: 20%;
+  left: -20%;
+  background: #e0e0e0;
+  overflow: hidden;
+  transition: left 0.5s;
+}
+nav div {
+  position: relative;
+  float: left;
+}
+#nav-menu {
+  width: 100%;
+  text-align: center;
+}
+#nav-menu button {
+  margin: 8px 5px;
+  margin: none;
+  background: transparent;
+  color: #9e9e9e;
+  transition: color 1s;
+}
+#nav-menu button:nth-child(1) { color: #212121; }
+#nav-tray {
+  width: 300%; /* FIXME: Change this value to the number of panes * 100%. */
+  left: 0;
+  transition: left 1s;
+}
+#nav-tray div {
+  width: 33.3333%; /* FIXME: Change this value to 100% / number of panes. */
+  height: 100%;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#nav-tray ul li {
+  color: #212121;
+  list-style: none;
+  margin-bottom: 15px;
+}
+#nav-tray ul li i { margin-right: 10px; }
+#nav-tray ul li.spacer {
+  content: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 1px;
+  width: 80%;
+  background: #9e9e9e;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: width 0.5s, left 0.5s;
+}
+main div {
+  width: 100%;
+  position: relative;
+}
+main #main-toolbar { background: #e0e0e0; }
+main #main-toolbar #menu-button {
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  background-color: #607d8b;
+}
+main #main-toolbar #menu-button div {
+  width: 36px;
+  height: 36px;
+  background: url('../images/menu_bullets.svg') no-repeat center/36px;
+  transform: rotate(-90deg);
+  transition: transform 0.5s;
+}
+main #main-toolbar #menu-button div.active { transform: rotate(0deg); }
+#main-filename {
+  float: left;
+  left: 36px;
+  top: -36px;
+  height: 36px;
+}
+#main-filename span {
+  font-family: 'Anonymous Pro';
+  font-size: 16pt;
+  color: #455a64;
+  margin-left: 15px;
+  line-height: 36px;
+}

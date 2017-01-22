@@ -1,0 +1,127 @@
+<!--
+This file is part of urite.
+
+urite is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+urite is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with urite.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ app 'name' }}</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/ripple.css" />
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/translate.js"></script>
+  </head>
+
+  <body onload="showDivs()">
+
+    <!-- IDEA: http://stackoverflow.com/questions/25715850/how-to-require-mode-theme-or-addon-of-code-mirror-in-browserify -->
+
+    <!-- HEADER -->
+    <header>
+      <div id="logo">
+        <img src="./images/icon.svg" alt="urite Icon" id="app-icon" />
+        <h1>{{ app 'name' }}</h1>
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+      <!-- MENU ICONS -->
+      <div id="nav-menu">
+        <button class="nav-button" id="menu_file"><i class="material-icons">insert_drive_file</i></button>
+        <button class="nav-button" id="menu_format"><i class="material-icons">text_format</i></button>
+        <button class="nav-button" id="menu_help"><i class="material-icons">help_outline</i></button>
+      </div>
+
+      <!-- MENU ACTIONS -->
+      <div id="nav-tray">
+        <!-- FILE MENU -->
+        <div>
+          <ul>
+            <li><i class="material-icons">insert_drive_file</i><a>{{ i18n 'index.file.new' }}</a></li>
+            <li><i class="material-icons">folder_open</i><a>{{ i18n 'index.file.open' }}</a></li>
+            <li><i class="material-icons">save</i><a>{{ i18n 'index.file.save' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">file_upload</i><a>{{ i18n 'index.file.import' }}</a></li>
+            <li><i class="material-icons">file_download</i><a>{{ i18n 'index.file.export' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">power_settings_new</i>{{ i18n 'index.file.quit' }}</li>
+          </ul>
+        </div>
+
+        <!-- FORMAT MENU -->
+        <div>
+          <ul>
+            <li><i class="material-icons">format_bold</i><a>{{ i18n 'index.format.bold' }}</a></li>
+            <li><i class="material-icons">format_italic</i><a>{{ i18n 'index.format.italic' }}</a></li>
+            <li><i class="material-icons">format_strikethrough</i><a>{{ i18n 'index.format.strike' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">remove</i><a>{{ i18n 'index.format.horizline' }}</a></li>
+            <li><i class="material-icons">insert_link</i><a>{{ i18n 'index.format.link' }}</a></li>
+            <li><i class="material-icons">code</i><a>{{ i18n 'index.format.codeblock' }}</a></li>
+            <li><i class="material-icons">format_quote</i><a>{{ i18n 'index.format.quoteblock' }}</a></li>
+            <li><i class="material-icons">format_indent_increase</i><a>{{ i18n 'index.format.indentinc' }}</a></li>
+            <li><i class="material-icons">format_indent_decrease</i><a>{{ i18n 'index.format.indentdec' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">format_list_bulleted</i><a>{{ i18n 'index.format.ul' }}</a></li>
+            <li><i class="material-icons">format_list_numbered</i><a>{{ i18n 'index.format.ol' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">border_all</i><a>{{ i18n 'index.format.table' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">looks_one</i><a>{{ i18n 'index.format.header1' }}</a></li>
+            <li><i class="material-icons">looks_two</i><a>{{ i18n 'index.format.header2' }}</a></li>
+            <li><i class="material-icons">looks_3</i><a>{{ i18n 'index.format.header3' }}</a></li>
+            <li><i class="material-icons">looks_4</i><a>{{ i18n 'index.format.header4' }}</a></li>
+            <li><i class="material-icons">looks_5</i><a>{{ i18n 'index.format.header5' }}</a></li>
+            <li><i class="material-icons">looks_6</i><a>{{ i18n 'index.format.header6' }}</a></li>
+          </ul>
+        </div>
+
+        <!-- HELP MENU -->
+        <div>
+          <ul>
+            <li><i class="material-icons">face</i><a>{{ i18n 'index.help.about' }}</a></li>
+            <li><i class="material-icons">copyright</i><a>{{ i18n 'index.help.license' }}</a></li>
+            <li><i class="material-icons">bug_report</i><a>{{ i18n 'index.help.bug' }}</a></li>
+            <li class="spacer"></li>
+            <li><i class="material-icons">help</i><a>{{ i18n 'index.help.help' }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <!-- TOOLBAR -->
+      <div id="main-toolbar">
+        <div id="menu-button">
+          <div></div>
+        </div>
+        <div id="main-filename"><span>{{ i18n 'index.main.defaultfilename' }}</span></div>
+      </div>
+
+      <!-- MAIN -->
+      <div id="main-field">
+        OE
+      </div>
+    </main>
+
+  </body>
+
+</html>

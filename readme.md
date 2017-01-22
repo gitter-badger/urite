@@ -1,17 +1,19 @@
-# Urite
+# urite
+
+[![Version](https://img.shields.io/badge/version-0.1.0--alpha.0-lightgrey.svg "v0.1.0-alpha.0")](https://github.com/nereare/urite/)
+[![Build Status](https://travis-ci.org/Nereare/urite.svg?branch=master)](https://travis-ci.org/Nereare/urite)
+[![Build status](https://ci.appveyor.com/api/projects/status/m72y5a07h4r88uou?svg=true)](https://ci.appveyor.com/project/Nereare/urite)
+[![Dependency Status](https://dependencyci.com/github/Nereare/urite/badge)](https://dependencyci.com/github/Nereare/urite)
 
 A distraction-free writer for [Atom](https://atom.io/).
 
 ## Installation
 
 1. Clone this repository: `git clone https://github.com/Nereare/urite.git`
-2. Edit it!
+2. Install dependencies: `npm install`
+3. Run it: `npm start`
 
 Keep in touch to see when the alpha is released! :wink:
-
-## Usage
-
-TODO: Write usage instructions
 
 ## Contributing
 
@@ -23,15 +25,25 @@ TODO: Write usage instructions
 
 ## History
 
-See the [Change Log](https://github.com/nereare/urite/changelog.md) for further history.
+See the [Change Log](https://github.com/nereare/urite/blob/master/changelog.md) for further history.
 
 ### Versioning
 
 This projects uses [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/nereare/urite/tags).
 
-## Credits
+## Credits and Thanks
 
-TODO: Write credits
+### Credits
+
+ * Anonymous Pro font, Copyright &copy; 2009, Mark Simonson <mark@marksimonson.com> (http://www.ms-studio.com).
+ * Raleway font, Copyright &copy; 2010, Matt McInerney <matt@pixelspread.com>, Copyright &copy; 2011, Pablo Impallari <impallari@gmail.com> (http://www.impallari.com), Copyright &copy; 2011, Rodrigo Fuenzalida <hello@rfuenzalida.com> (http://www.rfuenzalida.com).
+ * Sanchez font, Copyright &copy; 2012, LatinoType <luciano@latinotype.com>.
+ * Material Design Icons, by Google.
+ * CSS Ripple Effect, by Mladen Plavsic (https://github.com/mladenplavsic).
+
+### Thanks
+
+ * [Stefan Jakobsson](https://discuss.atom.io/users/StefanJ) for the guide on Electron i18n.
 
 ## License
 

@@ -1,0 +1,93 @@
+/*
+ * This file is part of urite.
+ *
+ * urite is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * urite is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with urite.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Anonymous Pro
+ * Copyright (c) 2009, Mark Simonson
+ * SIL Open Font License, Version 1.1
+ */
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url('../fonts/AnonymousPro-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: bold;
+  src: url('../fonts/AnonymousPro-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  font-style: italic;
+  src: url('../fonts/AnonymousPro-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/AnonymousPro-BoldItalic.ttf') format('truetype');
+}
+
+/*
+ * Raleway
+ * Copyright (c) 2010, Matt McInerney <matt@pixelspread.com>,
+ * Copyright (c) 2011, Pablo Impallari <impallari@gmail.com> (http://www.impallari.com),
+ * Copyright (c) 2011, Rodrigo Fuenzalida <hello@rfuenzalida.com> (http://www.rfuenzalida.com)
+ * SIL Open Font License, Version 1.1
+ */
+@font-face {
+  font-family: "Raleway";
+  src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: bold;
+  src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  src: url('../fonts/Raleway-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/Raleway-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: lighter;
+  src: url('../fonts/Raleway-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: lighter;
+  font-style: italic;
+  src: url('../fonts/Raleway-LightItalic.ttf') format('truetype');
+}
+
+/*
+ * Material Icons
+ * Google, Inc.
+ * Apache License, Version 2.0
+ */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
+}

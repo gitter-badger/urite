@@ -32,6 +32,7 @@ node_modules/
 # Logs and databases #
 ######################
 *.log
+*.log*
 *.sqlite
 
 # OS generated files #
@@ -69,7 +70,6 @@ Temporary Items
 
 # Tests #
 #########
-test/**
 tests/**
 test.*
 test*.*

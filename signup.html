@@ -1,0 +1,188 @@
+<!--
+This file is part of urite.
+
+urite is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+urite is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with urite.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ app 'name' }}</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/signup.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/ripple.css" />
+    <script src="./scripts/signup.js"></script>
+    <script src="./scripts/translate.js"></script>
+  </head>
+
+  <body onload="showDivs()">
+
+    <!-- HEADER -->
+    <header>
+      <div id="logo">
+        <img src="./images/icon.svg" alt="urite Icon" id="app-icon" />
+        <h1>{{ app 'name' }}</h1>
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+      <div>
+        <h2>{{ i18n 'signup.nav.title' }}</h2>
+        <ul>
+          <!-- Welcome Step -->
+          <li id="li-1" class="now">
+            <i class="material-icons">accessibility</i>
+            {{ i18n 'signup.nav.welcome' }}
+          </li>
+          <!-- Confirm Locale Step -->
+          <li id="li-2">
+            <i class="material-icons">flag</i>
+            {{ i18n 'signup.nav.locale' }}
+          </li>
+          <!-- Get Name Step -->
+          <li id="li-3">
+            <i class="material-icons">face</i>
+            {{ i18n 'signup.nav.name' }}
+          </li>
+          <!-- Confirm Data Step -->
+          <li id="li-4">
+            <i class="material-icons">playlist_add_check</i>
+            {{ i18n 'signup.nav.confirm' }}
+          </li>
+          <!-- Save and Finish Step -->
+          <li id="li-5">
+            <i class="material-icons">save</i>
+            {{ i18n 'signup.nav.finish' }}
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- Welcome Step -->
+      <div id="div-1" class="step div-now">
+        <div>
+          <h3>{{ i18n 'signup.welcome.title' }}</h3>
+          <p>{{ i18n 'signup.welcome.text1' }}</p>
+          <p>{{ i18n 'signup.welcome.text2' }}</p>
+          <p class="error hidden"><span>{{ i18n 'signup.welcome.error.title' }}</span>{{ i18n 'signup.welcome.error.text' }}</p>
+          <p class="note"><span>{{ i18n 'signup.welcome.note.title' }}</span>{{ i18n 'signup.welcome.note.text' }}</p>
+          <button class="shadow-1 ripple next" tabindex="0">
+            <i class="material-icons">skip_next</i>
+            {{ i18n 'button.next' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Confirm Locale Step -->
+      <div id="div-2" class="step div-later">
+        <div>
+          <h3>{{ i18n 'signup.locale.title' }}</h3>
+          <p>{{ i18n 'signup.locale.text' }}</p>
+          <p class="note"><span>{{ i18n 'signup.locale.note.title' }}</span>{{ i18n 'signup.locale.note.text' }}</p>
+          <form>
+            <select id="form-locale" tabindex="-1">
+              <option value="en">English ({{ i18n 'language.en' }})</option>
+              <option value="pt_BR">Português Brasileiro ({{ i18n 'language.pt_BR' }})</option>
+            </select>
+          </form>
+          <br />
+          <button class="shadow-1 ripple prev" tabindex="-1">
+            <i class="material-icons">skip_previous</i>
+            {{ i18n 'button.previous' }}
+          </button>
+          <span class="spacer"></span>
+          <button class="shadow-1 ripple next" tabindex="-1">
+            <i class="material-icons">skip_next</i>
+            {{ i18n 'button.next' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Get Name Step -->
+      <div id="div-3" class="step div-later">
+        <div>
+          <h3>{{ i18n 'signup.name.title' }}</h3>
+          <p>{{ i18n 'signup.name.text' }}</p>
+          <p class="note"><span>{{ i18n 'signup.name.note.title' }}</span>{{ i18n 'signup.name.note.text' }}</p>
+          <form>
+            <input id="form-name-first" type="text" name="firstname" autocomplete="on" placeholder="{{ i18n 'input.firstname' }}" pattern='^[a-zA-Z\u00C0-\u017F\u0020\u0027\u002d]+$' tabindex="-1" required />
+            <br />
+            <input id="form-name-last" type="text" name="lastname" autocomplete="on" placeholder="{{ i18n 'input.lastname' }}" pattern='^[a-zA-Z\u00C0-\u017F\u0020\u0027\u002d]+$' tabindex="-1" required />
+          </form>
+          <button class="shadow-1 ripple prev" tabindex="-1">
+            <i class="material-icons">skip_previous</i>
+            {{ i18n 'button.previous' }}
+          </button>
+          <span class="spacer"></span>
+          <button class="shadow-1 ripple next" tabindex="-1">
+            <i class="material-icons">skip_next</i>
+            {{ i18n 'button.next' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Confirm Data Step -->
+      <div id="div-4" class="step div-later">
+        <div>
+          <h3>{{ i18n 'signup.confirm.title' }}</h3>
+          <p>{{ i18n 'signup.confirm.text' }}</p>
+          <p class="card">
+            <span class="title"><i class="material-icons">person_add</i> {{ i18n 'signup.confirm.newuser' }}</span>
+            <br />
+            <span class="field"><span class="focus">{{ i18n 'interface.name' }}:</span> <span id="confirm-name">{{ i18n 'interface.empty' }}</span></span>
+            <br />
+            <span class="field"><span class="focus">{{ i18n 'interface.language' }}:</span> <span id="confirm-lang">{{ i18n 'interface.empty' }}</span></span>
+          </p>
+          <button class="shadow-1 ripple prev" tabindex="-1">
+            <i class="material-icons">skip_previous</i>
+            {{ i18n 'button.previous' }}
+          </button>
+          <span class="spacer"></span>
+          <button class="shadow-1 ripple next confirm" tabindex="-1" disabled>
+            <i class="material-icons">done</i>
+            {{ i18n 'button.confirm' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Save and Finish Step -->
+      <div id="div-5" class="step div-later">
+        <div>
+          <h3>{{ i18n 'signup.finish.title' }}</h3>
+          <p>
+            {{ i18n 'signup.finish.text' }}
+          </p>
+          <button class="shadow-1 ripple save" tabindex="-1">
+            <i class="material-icons">save</i>
+            {{ i18n 'button.save' }}
+          </button>
+          <p class="loader hidden">
+            <span></span>
+            <span></span>
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+
+</html>

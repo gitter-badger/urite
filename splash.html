@@ -1,0 +1,48 @@
+<!--
+This file is part of urite.
+
+urite is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+urite is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with urite.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ app 'name' }}</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/splash.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/ripple.css" />
+    <script src="./scripts/splash.js"></script>
+    <script src="./scripts/translate.js"></script>
+  </head>
+
+  <body onload="closeSplash()">
+    <main>
+      <img src="./images/icon.svg" alt="urite Icon" id="app-icon" />
+      <h1>{{ app 'name' }}</h1>
+      <p id="subtitle">
+        {{ i18n 'interface.copyright'}} &copy; {{ app 'copy_year' }} {{ app 'author_name' }}
+        <br />
+        {{ i18n 'interface.version' }} {{ app 'version' }}
+      </p>
+      <p class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </p>
+    </main>
+  </body>
+
+</html>
