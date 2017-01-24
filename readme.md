@@ -1,5 +1,7 @@
 # Urite
 
+[![Join the chat at https://gitter.im/urite/Lobby](https://badges.gitter.im/urite/Lobby.svg)](https://gitter.im/urite/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A distraction-free writer for [Atom](https://atom.io/).
 
 ## Installation
